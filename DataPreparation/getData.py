@@ -173,7 +173,7 @@ def innerJoin(businesses,coordinates):
     '''
     for business in businesses:
         for coordinate in coordinates:
-            if(business['name'] == coordinate['name'] and business['location'] == coordinate['loaction'][0]):
+            if(business['name'] == coordinate['name'] and business['location'] == coordinate['location'][0]):
                 business['longitude'] = coordinate['longitude']
                 business['latitude'] = coordinate['latitude']
 
