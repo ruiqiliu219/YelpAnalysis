@@ -52,14 +52,14 @@ def getFeatures(onePage,index):
 
 
 
-def categoricalVariable(list):
+def categoricalVariable(lst):
     '''Reads in a specific business category and the full category list
        if the business category matches a value in full category, returns 1 for this category
        otherwise returns 0
     '''
     isIncategory = []
     for i in range(len(full_category)):
-        if full_category[i] in list:
+        if full_category[i] in lst:
             isIncategory += [1]
         else:
             isIncategory += [0]
@@ -166,7 +166,7 @@ def requestAllCoordinates():
     return coordinates
 
 
-########### Inner Join two dictionaries by name and location ###########
+######### Inner Join two dictionaries by name and location ###########
 def innerJoin(businesses,coordinates):
     '''Inner Join businesses dictionary and coordinates dictionary
         Use name and location as key
@@ -203,7 +203,6 @@ def main():
             latitude = 'NaN'
         line = name + ',' + str(rating) + ',' + str(reviewCount) + ',' + price + ',' + category + ',' + \
                 location + ',' + str(longitude) + ',' + str(latitude) +'\n'
-        print(line)
         Output.write(line)
 
     Output.close()
