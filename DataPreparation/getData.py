@@ -38,7 +38,7 @@ def getFeatures(onePage,index):
 
     location = onePage[index].find_all("div",{"class":"secondary-attributes"})[0].span.text.strip()
     if(location == 'Phone number'):
-        location = 'NaN'
+        location = 'NA'
 
     rating = onePage[index].find_all("div",{"class" : "rating-large"})[0].i.img.get('alt')[:3]
 
@@ -186,7 +186,7 @@ def main():
     businesses = webScripping()
     coordinates = requestAllCoordinates()
     innerJoin(businesses,coordinates)
-    Output = open('yelpdata.txt','a')
+    Output = open('yelpdata.csv','a')
     Output.write("name,rating,reviewCount,price," + ', '.join(full_category) + ",location,longitude,latitude\n")
     for item in businesses:
         name = item['name']
