@@ -8,4 +8,4 @@ restuarant name, price, rating, business categories and location.
 ####Note
 For the final csv file:
 * The missing coordinates in the dataset were then filled with google search results
-* Categories where no or only restuarant falls in were removed
+* Categories in which none or only one restuarant falls were removed
